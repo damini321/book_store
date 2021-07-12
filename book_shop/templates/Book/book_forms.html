@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book detail</title>
+
+    <style>
+          th,td,tr{
+        border: 1px gray solid;
+        color: brown; 
+        /* text-shadow:1px 1px blue; */
+        text-align:center;
+        text-align:alignment left;
+        text-transform:inherit;
+      
+  
+
+        /* background-image: url("paper.gif");
+        background-color: #cccccc; */
+  
+        /* text-decoration:decoration type; */
+    
+          }
+    </style>
+
+</head>
+<body>
+<form action="" method="POST">
+{% csrf_token %}
+
+     search_by_genre: <input type="text" name="genre"/><br/>
+     search_by_language: <input type="text" name="language"/><br/>
+     
+
+<input type="submit" value="Post"/>
+</form>
+
+    <h1>book detail</h1>
+    
+
+    {% if Book %}
+    <table>
+      
+        <tr>
+          <th>book_name</th>
+          <th>Author</th>
+          <th>genre</th>
+          <th>language</th>
+
+        </tr>
+         {% for Bd in Book%}
+        <tr>
+            <td>{{Bd.Book_name}}</td>
+            <td>{{Bd.Author}}</td>
+            <td>{{Bd.genre}}</td>
+            <td>{{Bd.language}}</td>
+        </tr>
+        {% endfor %}
+
+        </table>
+    {% else %}
+    <h1> no data</h1>
+    {% endif %}
+
+</body>
+</html>
+

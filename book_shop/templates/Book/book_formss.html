@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load bootstrap %}
+form action="" method="GET">
+{{ <filter class="form"></filter>}}
+{% csrf_token %}
+
+     Book Name: <input type="text" name="Book_name"/><br/>
+     Author: <input type="text" name="Author"/><br/>
+     genre: <input type="text" name="genre"/><br/>
+    language: <input type="text" name="language"/><br/>
+<input type="submit" value="Post"/>
+</form>
+
+</body>
+</html>

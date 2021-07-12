@@ -1,0 +1,25 @@
+<html>
+<head>
+    <style>
+          th,td{
+        border: 1px black solid;
+          }
+    </style>
+<title>enter a book detail </title>
+</head>
+
+<body>
+<h1>Create a Book Detail </h1>
+<form action="" method="POST">
+{% csrf_token %}
+
+     Book Name: <input type="text" name="Book_name"/><br/>
+     Author: <input type="text" name="Author"/><br/>
+     genre: <input type="text" name="genre"/><br/>
+    language: <input type="text" name="language"/><br/>
+<input type="submit" value="Post"/>
+
+</form>
+</body>
+
+</html>
